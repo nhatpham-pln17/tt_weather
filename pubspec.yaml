@@ -11,9 +11,15 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
-
   cupertino_icons: ^1.0.2
+  geocoding: ^2.0.5
+  geolocator: ^8.2.0
+  get: ^4.6.0
+  google_fonts: ^3.0.1
+  http: ^0.13.0
+  iconsax: ^0.0.8
+  intl: ^0.18.0
+  sleek_circular_slider: ^2.0.1
 
 dev_dependencies:
   flutter_test:
