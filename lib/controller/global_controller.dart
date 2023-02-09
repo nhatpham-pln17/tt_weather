@@ -24,7 +24,9 @@ class GlobalController extends GetxController {
   void onInit() {
     if (_isLoading.isTrue) {
       getLocation();
-    } else {}
+    } else {
+      getIndex();
+    }
     super.onInit();
   }
 
@@ -69,5 +71,9 @@ class GlobalController extends GetxController {
         _isLoading.value = false;
       });
     });
+  }
+
+  RxInt getIndex() {
+    return _currentIndex;
   }
 }
