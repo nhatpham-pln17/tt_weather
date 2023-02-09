@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:tt_weather/controller/global_controller.dart';
+import 'package:tt_weather/widget/dailyforcast_widget.dart';
 import 'package:tt_weather/widget/header_widget.dart';
 import 'package:tt_weather/widget/currentweather_widget.dart';
 import 'package:tt_weather/widget/hourlyforcast_widget.dart';
@@ -34,10 +35,15 @@ class _HomeScreenState extends State<HomeScreen> {
                         weatherDataCurrent:
                             globalController.getData().getCurrentWeather()),
 
-                    //list hourly forcast
+                    //list hourly forecast
                     HourlyWidget(
                         weatherDataHourly:
                             globalController.getData().getHourlyWeather()),
+
+                    //daily forecast
+                    DailyForecast(
+                        weatherDataDaily:
+                            globalController.getData().getDailyWeather()),
                   ],
                 ),
         ),

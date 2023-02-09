@@ -5,6 +5,7 @@ import 'package:tt_weather/api/api_key.dart';
 import 'package:tt_weather/model/weather_data.dart';
 import 'package:tt_weather/model/weatherdata_current.dart';
 import 'package:tt_weather/model/weatherdata_hourly.dart';
+import 'package:tt_weather/model/weatherdata_daily.dart';
 
 class FetchWeatherAPI {
   WeatherData? weatherData;
@@ -15,6 +16,7 @@ class FetchWeatherAPI {
     weatherData = WeatherData(
       WeatherDataCurrent.fromJson(jsonString),
       WeatherDataHourly.fromJson(jsonString),
+      WeatherDataDaily.fromJson(jsonString),
     );
 
     return weatherData!;
